@@ -1,0 +1,39 @@
+{
+  "Name": "ChatBotInteractionFacetModel",
+  "Version": "1.0",
+  "References": [
+    {
+      "Name": "XConnect",
+      "Version": "1.0"
+    },
+    {
+      "Name": "Sitecore.XConnect.Collection.Model",
+      "Version": "9.0"
+    }
+  ],
+  "Types": {
+    "Sitecore.Web.Feature.ChatBot.Models.Facets.ChatBotAnalytics": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "Sitecore.Web.Feature.ChatBot.Models.Facets.ChatBotAnalytics, Sitecore.Web.Feature.ChatBot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "ChatId": {
+          "Type": "String"
+        },
+        "Question": {
+          "Type": "String"
+        },
+        "Answer": {
+          "Type": "String"
+        }
+      }
+    }
+  },
+  "Facets": [
+    {
+      "Target": "Interaction",
+      "Name": "CustomerChatBot",
+      "Type": "Sitecore.Web.Feature.ChatBot.Models.Facets.ChatBotAnalytics"
+    }
+  ]
+}

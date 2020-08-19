@@ -1,0 +1,31 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+        @Html.Sitecore().VisitorIdentification()
+		
+		<base href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+    <link href="-/media/POC/styles/chatbot-custom.css" rel="stylesheet">
+	<link href="-/media/POC/styles/bootstrap-grid.css" rel="stylesheet">
+	
+    <!--Header Media Start-->
+    <script src="-/media/POC/Scripts/jquery351.js"></script>
+    <script src="-/media/POC/Scripts/bootstrap.js"></script>
+    </head>
+    <body>
+        
+        <div>
+            @Html.Sitecore().Placeholder("main")
+        </div>
+    </body>
+</html>
